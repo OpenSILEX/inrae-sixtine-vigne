@@ -3,7 +3,7 @@
 // Copyright © INRA 2019
 // Contact: vincent.migot@inra.fr, anne.tireau@inra.fr, pascal.neveu@inra.fr
 //******************************************************************************
-package fr.inrae.sixtine;
+package fr.inrae.sixtine.vigne;
 
 import java.util.List;
 import org.apache.jena.riot.Lang;
@@ -16,7 +16,7 @@ import org.opensilex.sparql.extensions.SPARQLExtension;
 /**
  * Sixtine module implementation
  */
-public class SixtineModule extends OpenSilexModule implements SPARQLExtension {
+public class SixtineVigneModule extends OpenSilexModule implements SPARQLExtension {
 
     @Override
     public List<OntologyFileDefinition> getOntologiesFiles() throws Exception {

@@ -75,7 +75,7 @@ variables:
 ##  SIXTINE BUILD INSTANCE
 ######################## 
 
-sixtine:build:
+sixtine:vigne:build:
   <<: *build_template_with_opensilex
   script:
     # Create module folder if not exists

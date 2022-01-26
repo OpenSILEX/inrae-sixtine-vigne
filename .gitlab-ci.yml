@@ -103,7 +103,7 @@ sixtine:vigne:build:
     - ls $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target
     - curl --location --output artifacts.zip "https://github.com/OpenSILEX/opensilex/releases/download/$REVISION/opensilex-release-$REVISION.zip" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
     - mv $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target/$MODULE_ID-$MODULE_REVISION.jar $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION/modules/$MODULE_ID.jar
-    - mv $CI_PROJECT_DIR/$REVISION/modules/opensilex-data-analysis.jar $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION/modules
+  #  - mv $CI_PROJECT_DIR/$REVISION/modules/opensilex-data-analysis.jar $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION/modules
   artifacts:
     paths:
       - $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION

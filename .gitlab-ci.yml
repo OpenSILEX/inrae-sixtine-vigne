@@ -102,11 +102,10 @@ sixtine:vigne:build:
     # Copy generated JAR module into opensilex-dev artifact "modules" folder
     - ls $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target
     - |
-      if $LASTEST ; then
-        echo "Lastest";
+      if $LASTEST ; then 
         curl --location --output artifacts.zip --header "JOB-TOKEN:$CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/master/download?job=opensilex:build" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} ;
-      else
-        echo "Not lastest";
+    - |
+      if ! $LASTEST ; then 
         curl --location --output artifacts.zip "https://github.com/OpenSILEX/opensilex/releases/download/$REVISION/opensilex-release-$REVISION.zip" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} ;
       fi
     - unzip -o artifacts.zip

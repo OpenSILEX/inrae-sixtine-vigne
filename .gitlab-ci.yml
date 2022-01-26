@@ -24,7 +24,7 @@ variables:
  REVISION: "1.0.0-rc+2"
  COMMIT_SHA_OPENSILEX_DEV: "15ce2a50e46dd9bb1bb42ee2f8e555988c749c67" # master
  MODULE_REVISION: "1.0.0"
- LASTEST: true
+ LASTEST: "true"
 
 ########################
 ##  CACHE TEMPLATE

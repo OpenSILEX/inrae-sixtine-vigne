@@ -104,7 +104,7 @@ sixtine:vigne:build:
     - |
       if [[ "$LASTEST" == "true" ]]; then
         echo " Lastest use opensilex build archive"
-        curl --location --output artifacts.zip --header "JOB-TOKEN:$CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/master/download?job=opensilex:build" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
+        curl --location --output artifacts.zip --header "JOB-TOKEN:$CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/master/download?job=opensilex:build" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/temp mv ${CI_PROJECT_DIR}/temp/INSTANCE-SNAPSHOT/INSTANCE-SNAPSHOT ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
       fi
     - |
       if [[ "$LASTEST" == "false" ]]; then

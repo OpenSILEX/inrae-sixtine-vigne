@@ -101,10 +101,11 @@ sixtine:vigne:build:
     - mvn install $MAVEN_CLI_OPTS -Drevision=$REVISION
     # Copy generated JAR module into opensilex-dev artifact "modules" folder
     - ls $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target
+    # https://askubuntu.com/questions/468870/append-text-to-file-names-which-do-not-contain-a-dot
     - |
       if [[ "$TAG" == "true" ]]; then
         echo " Lastest use opensilex commit archive"
-        mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && mv ${CI_PROJECT_DIR}/opensilex-dev/opensilex-release/target/opensilex/* ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
+        mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && mv ${CI_PROJECT_DIR}/opensilex-dev/opensilex-release/target/opensilex/* ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && find ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} -type f ! -name "*$REVISION*" -exec rename -n 's/(.*)\.jar/$1-$REVISION.jar/' {} \;
       fi
     - |
       if [[ "$TAG" == "false" ]]; then

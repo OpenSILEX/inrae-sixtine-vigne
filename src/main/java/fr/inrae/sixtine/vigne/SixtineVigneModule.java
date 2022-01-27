@@ -25,7 +25,7 @@ public class SixtineVigneModule extends OpenSilexModule implements SPARQLExtensi
                 "https://sixtine.inrae.fr/ontology#",
                 "ontologies/inrae-sixtine.owl",
                 Lang.RDFXML,
-                "inrae-sixtine"
+                "oeso-sixtine"
         ));
 
         SPARQLConfig sparqlConfig = getOpenSilex().getModuleConfig(SPARQLModule.class, SPARQLConfig.class);

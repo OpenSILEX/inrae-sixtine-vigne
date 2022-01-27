@@ -24,7 +24,7 @@ variables:
  REVISION: "1.0.0-rc+2"
  COMMIT_SHA_OPENSILEX_DEV: "15ce2a50e46dd9bb1bb42ee2f8e555988c749c67" # master
  MODULE_REVISION: "1.0.0"
- LASTEST: "true"
+ TAG: "true"
 
 ########################
 ##  CACHE TEMPLATE
@@ -102,12 +102,12 @@ sixtine:vigne:build:
     # Copy generated JAR module into opensilex-dev artifact "modules" folder
     - ls $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target
     - |
-      if [[ "$LASTEST" == "true" ]]; then
-        echo " Lastest use opensilex build archive"
-        curl --location --output artifacts.zip --header "JOB-TOKEN:$CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/master/download?job=opensilex:build" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/temp && mv ${CI_PROJECT_DIR}/temp/INSTANCE-SNAPSHOT/* ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
+      if [[ "$TAG" == "true" ]]; then
+        echo " Lastest use opensilex commit archive"
+        mv ${CI_PROJECT_DIR}/opensilex-dev/opensilex-release/target/opensilex/* ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
       fi
     - |
-      if [[ "$LASTEST" == "false" ]]; then
+      if [[ "$TAG" == "false" ]]; then
         echo " Not lastest, use tag $REVISION"
         curl --location --output artifacts.zip "https://github.com/OpenSILEX/opensilex/releases/download/$REVISION/opensilex-release-$REVISION.zip" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
       fi

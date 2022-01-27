@@ -13,6 +13,7 @@ variables:
  MVN_VERSION: 3.6.3
  # DEFAULT SERVER JAVA VERSION
  JAVA_VERSION: 11
+ REVISION: 'INSTANCE-SNAPSHOT'
  # This will supress any download for dependencies and plugins or upload messages which would clutter the console log.
  # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
  MAVEN_CACHE_FOLDER: "$CI_PROJECT_DIR/.m2/repository"
@@ -21,10 +22,6 @@ variables:
  NODE_CACHE: "$CI_PROJECT_DIR/opensilex-dev/.node"
  EMBDED_MONGO_CACHE: "/root/.embedmongo/"
  MODULE_ID: "inrae-sixtine-vigne"
- REVISION: "1.0.0-rc+2"
- COMMIT_SHA_OPENSILEX_DEV: "15ce2a50e46dd9bb1bb42ee2f8e555988c749c67" # master
- MODULE_REVISION: "1.0.0"
- 
 
 ########################
 ##  CACHE TEMPLATE
@@ -46,22 +43,15 @@ variables:
 ########################
 
 .build:instance: &build_template_with_opensilex
-  <<: *cache_dependencies 
+  <<: *cache_dependencies
   before_script:
     # Enable extended pattern for mv command
     - shopt -s extglob
     # Download and unzip latest artifact from opensilex-dev
-    - cd $CI_PROJECT_DIR 
-    - ls $CI_PROJECT_DIR 
-    # Retreive data analysis
+    - cd $CI_PROJECT_DIR
+    - rm -rf $REVISION
     - 'curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/master/download?job=opensilex:build"'
     - unzip -o artifacts.zip
-    - DDL_DIR=$(ls -Icache_yarn -Ifront -Iopensilex-dev -d */|head -n 1)
-    - ls $CI_PROJECT_DIR 
-    - ls $DDL_DIR
-    - mkdir -p $CI_PROJECT_DIR/$REVISION
-    - mv $DDL_DIR/* $REVISION
-    - ls $CI_PROJECT_DIR 
     # Clone original opensilex-dev sources
     - cd $CI_PROJECT_DIR
     - mkdir -p $CI_PROJECT_DIR/opensilex-dev
@@ -100,15 +90,10 @@ sixtine:vigne:build:
     - cd $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID
     - mvn install $MAVEN_CLI_OPTS -Drevision=$REVISION
     # Copy generated JAR module into opensilex-dev artifact "modules" folder
-    - ls $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target
-    - curl --location --output artifacts.zip "https://github.com/OpenSILEX/opensilex/releases/download/$REVISION/opensilex-release-$REVISION.zip" && mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && unzip -o artifacts.zip -d ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}
-    - mv $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target/$MODULE_ID-$MODULE_REVISION.jar $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION/modules/$MODULE_ID.jar
-  #  - mv $CI_PROJECT_DIR/$REVISION/modules/opensilex-data-analysis.jar $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION/modules
+    - mv $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target/$MODULE_ID-$REVISION.jar $CI_PROJECT_DIR/$REVISION/modules/$MODULE_ID.jar
   artifacts:
     paths:
-      - $CI_PROJECT_DIR/$OPENSILEX_APP_REVISION
-
-
+      - $CI_PROJECT_DIR/$REVISION
       
 trigger:sixtine:vigne:deploy:test:
   stage: deploy

@@ -105,7 +105,7 @@ sixtine:vigne:build:
     - |
       if [[ "$TAG" == "true" ]]; then
         echo " Lastest use opensilex commit archive"
-        mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && mv ${CI_PROJECT_DIR}/opensilex-dev/opensilex-release/target/opensilex/* ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && find ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} -type f ! -name "*$REVISION*" -exec rename -n 's/(.*)\.jar/$1-$REVISION.jar/' {} \;
+        mkdir -p ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && mv ${CI_PROJECT_DIR}/opensilex-dev/opensilex-release/target/opensilex/* ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION} && ls ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}/modules && find ${CI_PROJECT_DIR}/${OPENSILEX_APP_REVISION}/modules -type f ! -name "*$REVISION*" -exec rename -n 's/(.*)\.jar/$1-$REVISION.jar/' {} \;
       fi
     - |
       if [[ "$TAG" == "false" ]]; then

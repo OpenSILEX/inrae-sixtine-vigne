@@ -50,14 +50,16 @@ variables:
     # Download and unzip latest artifact from opensilex-dev
     - cd $CI_PROJECT_DIR
     - rm -rf $REVISION
-    - 'curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/master/download?job=opensilex:build"'
+    - 'echo "BRANCH: ${BRANCH}"'
+    - 'echo "BUILD_JOB: ${BUILD_JOB}"'
+    - 'curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://forgemia.inra.fr/api/v4/projects/1675/jobs/artifacts/${BRANCH}/download?job=${BUILD_JOB}"'
     - unzip -o artifacts.zip
     # Clone original opensilex-dev sources
     - cd $CI_PROJECT_DIR
     - mkdir -p $CI_PROJECT_DIR/opensilex-dev
     - cd opensilex-dev
     - git init
-    - git pull https://gitlab-ci-token:${CI_JOB_TOKEN}@forgemia.inra.fr/OpenSILEX/opensilex-dev.git
+    - git pull https://gitlab-ci-token:${CI_JOB_TOKEN}@forgemia.inra.fr/OpenSILEX/opensilex-dev.git ${BRANCH}
     # Ensure to load same commit as used to generate opensilex-dev artifact
     - |
       if [ ! -z "$COMMIT_SHA_OPENSILEX_DEV" ]; then
@@ -77,6 +79,9 @@ variables:
 
 sixtine:vigne:build:
   <<: *build_template_with_opensilex
+  variables:
+    BRANCH: master
+    BUILD_JOB: opensilex-master:build
   script:
     # Create module folder if not exists
     - mkdir -p $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID
@@ -102,3 +107,31 @@ trigger:sixtine:vigne:deploy:test:
     - curl --request POST --form "variables[DEPLOY]=sixtine-vigne-test" --form "token=$CI_JOB_TOKEN" --form "ref=master" --form "variables[COMMIT_SHA_OPENSILEX_DEV]=$COMMIT_SHA_OPENSILEX_DEV" https://forgemia.inra.fr/api/v4/projects/403/trigger/pipeline
   needs: 
     - job: "sixtine:vigne:build"
+    - job: "sixtine:pechrouge:test:build"
+
+########################
+##  PECHROUGE TEST BUILD INSTANCE
+######################## 
+
+sixtine:pechrouge:test:build:
+  <<: *build_template_with_opensilex
+  variables:
+    BRANCH: maximilian
+    BUILD_JOB: maximilian:build
+  script:
+    # Create module folder if not exists
+    - mkdir -p $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID
+    # Remove everything in module folder except "node_modules" folder
+    - cd $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID
+    - rm -rf !(node_modules)
+    # Copy all module project sources into opensilex-dev folder
+    - cd $CI_PROJECT_DIR
+    - mv !(.m2|cache_yarn|opensilex-dev|$REVISION) $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID
+    # Build module inside openxilex-dev directory structure
+    - cd $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID
+    - mvn install $MAVEN_CLI_OPTS -Drevision=$REVISION
+    # Copy generated JAR module into opensilex-dev artifact "modules" folder
+    - mv $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID/target/$MODULE_ID-$REVISION.jar $CI_PROJECT_DIR/$REVISION/modules/$MODULE_ID.jar
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/$REVISION

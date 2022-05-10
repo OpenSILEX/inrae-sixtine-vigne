@@ -107,7 +107,7 @@ trigger:sixtine:vigne:deploy:test:
     - curl --request POST --form "variables[DEPLOY]=sixtine-vigne-test" --form "token=$CI_JOB_TOKEN" --form "ref=master" --form "variables[COMMIT_SHA_OPENSILEX_DEV]=$COMMIT_SHA_OPENSILEX_DEV" https://forgemia.inra.fr/api/v4/projects/403/trigger/pipeline
   needs: 
     - job: "sixtine:vigne:build"
-    - job: "sixtine:pechrouge:test:build"
+   # - job: "sixtine:pechrouge:test:build"
 
 ########################
 ##  PECHROUGE TEST BUILD INSTANCE

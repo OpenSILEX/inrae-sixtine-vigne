@@ -5,5 +5,12 @@
         "login": {
             "info": "Please enter your identifiers to login"
         }
-    }
+    },
+    "component": {
+        "menu": {
+            "devices": "Devices",
+            "facilities": "Facilities"
+            }
+        }
+
 }

@@ -17,7 +17,8 @@
     <artifactId>inrae-sixtine-vigne</artifactId>
     <packaging>jar</packaging>
     <name>inrae-sixtine-vigne</name>
-
+    <version>1.0.0</version>
+    
     <properties>
         <revision>BUILD-SNAPSHOT</revision>
         <skipFrontTypesGeneration>true</skipFrontTypesGeneration>

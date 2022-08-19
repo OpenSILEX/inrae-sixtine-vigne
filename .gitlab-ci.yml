@@ -136,3 +136,5 @@ sixtine:pechrouge:test:build:
   artifacts:
     paths:
       - $CI_PROJECT_DIR/$REVISION
+  tags:
+    - stable

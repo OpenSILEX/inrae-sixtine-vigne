@@ -66,6 +66,7 @@ variables:
       if [ ! -z "$COMMIT_SHA_OPENSILEX_DEV" ]; then
         git checkout $COMMIT_SHA_OPENSILEX_DEV
       fi
+    - git log -n 1
     # Build opensilex-dev for module compilation
     - cd $CI_PROJECT_DIR/opensilex-dev
     - mvn clean install $MAVEN_CLI_OPTS -Pfor-module -Drevision=$REVISION

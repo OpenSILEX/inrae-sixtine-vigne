@@ -82,8 +82,8 @@ variables:
 sixtine:vigne:build:
   <<: *build_template_with_opensilex
   variables:
-    BRANCH: master
-    BUILD_JOB: opensilex-master:build
+    BRANCH: develop
+    BUILD_JOB: opensilex-develop:build
   script:
     # Create module folder if not exists
     - mkdir -p $CI_PROJECT_DIR/opensilex-dev/$MODULE_ID

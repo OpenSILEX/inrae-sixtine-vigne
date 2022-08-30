@@ -101,7 +101,8 @@ sixtine:vigne:build:
   artifacts:
     paths:
       - $CI_PROJECT_DIR/$REVISION
-      
+  allow_failure: true
+        
 trigger:sixtine:vigne:deploy:test:
   stage: deploy
   image: curlimages/curl

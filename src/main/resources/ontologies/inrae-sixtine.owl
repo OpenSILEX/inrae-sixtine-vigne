@@ -21,14 +21,14 @@
      xmlns:sesame="http://www.openrdf.org/schema/sesame#"
      xmlns:vocabulary="http://www.opensilex.org/vocabulary/oeso#"
      xmlns:oeso-sixtine="https://www.opensilex.org/vocabulary/oeso-sixtine#"
-     xmlns:sixtine-vigne="http://vegetalunit.inrae.fr/vigne/"
-     <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine">
+     xmlns:sixtine-vigne="http://vegetalunit.inrae.fr/vigne/">
+    <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine">
         <creator>Anne Tireau, Llorenç Cabrera-Bosquet, Pascal Neveu (INRA Montpellier)</creator>
         <rdfs:comment>INRA MISTEA
             Copyright © - INRAE - 2014 - 2022
             Oeso extention ontology for SIXTINE is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</rdfs:comment>
-        <rdfs:label xml:lang="en">OpenSILEX - Sixtine</rdfs:label>
-        <owl:versionInfo>Version 1.0.0-rc+1 (2021-11-15) created by INRAE</owl:versionInfo>
+        <rdfs:label xml:lang="en">OpenSILEX - Sixtine - Vigne</rdfs:label>
+        <owl:versionInfo>Version 1.0.0-rc+5 (2022-10-12) created by INRAE</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1047,7 +1047,10 @@
 
     <!-- http://www.opensilex.org/vocabulary/oeso#Facility -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Facility"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Facility">
+        <rdfs:label xml:lang="fr">Plateforme</rdfs:label>
+        <rdfs:label xml:lang="en">Platform</rdfs:label>
+    </owl:Class>
     
 
 

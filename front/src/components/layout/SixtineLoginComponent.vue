@@ -1,239 +1,62 @@
-<template>
-  <div class="fullmodal auth-wrapper" v-if="!user.isLoggedIn() || forceRefresh">
-    <div class="container-fluid h-100">
-      <div class="row flex-row h-100 bg-white">
-        <div class="col-xl-8 col-lg-6 col-md-5 p-0 d-md-block d-lg-block d-sm-none d-none">
-          <div class="lavalite-bg"
-            v-bind:style="{'background-image': 'url(' + $opensilex.getResourceURI('images/opensilex-login-bg.jpg') + ')'}">
-            <div class="lavalite-overlay"></div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-7 my-auto p-0">
-          <div class="authentication-form mx-auto">
-            <div class="logo-centered">
-              <img v-bind:src="$opensilex.getResourceURI('images/sixtine-logo.png')"/>
-            </div>
-            <opensilex-SelectForm
-              v-if="connectionOptions.length > 1"
-              :label="$t('LoginComponent.selectLoginMethod')"
-              :options="connectionOptions"
-              :selected.sync="loginMethod"
-              @select="loginMethodChange"
-            ></opensilex-SelectForm>
-            <p>{{ $t("sixtine.login.info") }}:</p>
-            <ValidationObserver v-if="loginMethod == 'password'" ref="validatorRef">
-              <b-form @submit.prevent="onLogin" class="fullmodal-form">
-                <b-form-group id="login-group" required>
-                  <ValidationProvider :name="$t('component.login.validation.email')" rules="required|emailOrUrl" v-slot="{ errors }" >
-                    <b-form-input id="email" v-model="form.email" required
-                      :placeholder="$t('component.login.input.email')"
-                    ></b-form-input>
-                    <i class="ik ik-user"></i>
-                    <div v-if="errors.length > 0" class="error-message alert alert-danger">{{ errors[0] }}</div>
-                  </ValidationProvider>
-                </b-form-group>
 
-                <b-form-group id="password-group" required>
-                  <ValidationProvider :name="$t('component.login.validation.password')" rules="required" v-slot="{ errors }">
-                    <b-form-input id="password" type="password" v-model="form.password" required
-                      :placeholder="$t('component.login.input.password')"
-                    ></b-form-input>
-                    <i class="ik ik-lock"></i>
-                    <div v-if="errors.length > 0" class="error-message alert alert-danger">{{ errors[0] }}</div>
-                  </ValidationProvider>
-                </b-form-group> 
-                <a href="forgot-password" v-if="!isResetPassword()"><span>{{$t('LoginComponent.forgotPassword')}}</span></a>
-                <div class="sign-btn text-center">
-                  <b-button type="submit" variant="primary" v-text="$t('component.login.button.login')"></b-button>
-                </div>
-              </b-form>
-            </ValidationObserver>
-            <div class="logo-inrae text-center">
-              <img v-bind:src="$opensilex.getResourceURI('images/logo-marque-inrae.png')" alt="inrae-logo"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<template>
+  <opensilex-DefaultLoginComponent>
+    <template v-slot:loginMedia>
+      <b-img
+        :src="
+          $opensilex.getResourceURI('images/opensilex-login-bg.jpg')
+        "
+      ></b-img>
+    </template>
+    <template v-slot:loginLogo>
+      <b-img
+        :src="
+          $opensilex.getResourceURI('images/sixtine-logo.png')
+        "
+        fluid
+        alt="Responsive image"
+      ></b-img>
+    </template>
+    <template v-slot:loginFooter> 
+        <b-img
+          class="w-75"
+          center
+          :src="
+            $opensilex.getResourceURI('images/logo-marque-inrae.png')
+          "
+          alt="Responsive image"
+        ></b-img> 
+    </template>
+  </opensilex-DefaultLoginComponent>
 </template>
 
 <script lang="ts">
-import { Component, Ref } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 import Vue from "vue";
+import { VersionInfoDTO } from "opensilex-core/index";
 import OpenSilexVuePlugin from "../../../../../opensilex-front/front/src/models/OpenSilexVuePlugin";
-import { User } from "../../../../../opensilex-front/front/src/models/User";
-// @ts-ignore
-import { TokenGetDTO, AuthenticationService } from "opensilex-security/index";
-// @ts-ignore
-import HttpResponse, { OpenSilexResponse } from "opensilex-security/HttpResponse";
-import { FrontConfigDTO } from "../../../../../opensilex-front/front/src/lib";
-// @ts-ignore
-import { SystemService, versionInfoDTO } from "opensilex-core/index";
 
 @Component
-export default class SixtineLoginComponent extends Vue { 
-  service: SystemService;
-  versionInfo: versionInfoDTO = {};
-  $store: any;
-  $router: any;
+export default class SixtineLoginComponent extends Vue {
+  versionInfo: VersionInfoDTO = {};
+  $opensilex: OpenSilexVuePlugin;
   $t: any;
-
-  get form() {
-    return {
-      email: "",
-      password: ""
-    };
-  }
-
-
-  get user() {
-    return this.$store.state.user;
-  }
-
-  getPHISModuleVersion(){
-    for(let module_version_index in this.versionInfo.modules_version){
-      let module = this.versionInfo.modules_version[module_version_index]
-
-      console.log(module)
-      if(module.name.includes("PhisWsModule")){
-        return module.version;
-      }
-    }
-    return 'Version undefined'
-  }
-
-  loginMethod = "password";
-
-  get connectionOptions() {
-    let options = [
-      {
-        id: "password",
-        label: this.$t("LoginComponent.passwordConnectionTitle")
-      }
-    ];
-
-    let opensilexConfig: FrontConfigDTO = this.$opensilex.getConfig();
-
-    if (opensilexConfig.openIDAuthenticationURI) {
-      options.push({
-        id: "openid",
-        label: opensilexConfig.openIDConnectionTitle
-      });
-    }
-
-    return options;
-  }
 
   created() {
     this.versionInfo = this.$opensilex.versionInfo;
   }
 
-  loginMethodChange(loginMethod) {
-    console.error(loginMethod);
-    if (loginMethod.id == "openid") {
-      let opensilexConfig: FrontConfigDTO = this.$opensilex.getConfig();
-      window.location.href = opensilexConfig.openIDAuthenticationURI;
-    } else if (loginMethod.id == "password") {
-      this.validatorRef.reset();
-    }
-  }
-
-  isResetPassword(){
-    let opensilexConfig: FrontConfigDTO = this.$opensilex.getConfig();
-    return opensilexConfig.activateResetPassword;
-  }
-
-  $opensilex: OpenSilexVuePlugin;
-
-  static async asyncInit($opensilex: OpenSilexVuePlugin) {
-    await $opensilex.loadService("opensilex-security.AuthenticationService");
-  }
-
-  logout() {
-    this.$store.commit("logout");
-    this.$router.push("/");
-  }
-
-  @Ref("validatorRef") readonly validatorRef!: any;
-
-  forceRefresh = false;
-  onLogin() {
-    let validatorRef: any = this.validatorRef;
-    validatorRef.validate().then(isValid => {
-      if (isValid) {
-        this.$opensilex.showLoader();
-        this.$opensilex
-          .getService<AuthenticationService>(
-            "opensilex-security.AuthenticationService"
-          )
-          .authenticate({
-            identifier: this.form.email,
-            password: this.form.password
-          })
-          .then((http: HttpResponse<OpenSilexResponse<TokenGetDTO>>) => {
-            let user = User.fromToken(http.response.result.token);
-            this.$opensilex.setCookieValue(user);
-            this.forceRefresh = true;
-            this.$store.commit("login", user);
-            this.$store.commit("refresh");
-          })
-          .catch(error => {
-            if (error.status == 403) {
-              console.error("Invalid credentials", error);
-              this.$opensilex.errorHandler(
-                error,
-                this.$t("component.login.errors.invalid-credentials")
-              );
-            } else {
-              this.$opensilex.errorHandler(error);
-            }
-            this.$opensilex.hideLoader();
-          });
-      }
-    });
-  }
 }
 </script>
 
-<style scoped lang="scss">
-.fullmodal {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 9999;
-}
+<style scoped lang="scss"> 
 
-.logo-centered > img {
-  display: inline-block;
-  width: 350px;
-  height: 150px;  
-}
-
-.logo-bg > img{
-  max-width: 100%;
-  max-height: 100%;  
-}
-
-.authentication-form .error-message {
-  top: 37px;
-}
-
-.authentication-form fieldset {
-  margin-bottom: 25px;
-}
-
-.logo-inrae {
-  margin-top: 25px;
+.authentication-form .mx-auto  > .logo-centered > img{
+  width: 350px!important;
 }
 
 </style>
-
+ 
 <i18n>
 en:
   LoginComponent:

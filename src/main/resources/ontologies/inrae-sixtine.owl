@@ -940,7 +940,7 @@
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#CultivatedLand">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Facility"/>
         <rdfs:label xml:lang="en">Cultivated Land</rdfs:label>
-        <rdfs:label xml:lang="fr">Parcelle Argicole</rdfs:label>
+        <rdfs:label xml:lang="fr">Parcelle Agricole</rdfs:label>
     </owl:Class>
     
 

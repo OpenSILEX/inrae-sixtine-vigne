@@ -28,7 +28,7 @@
             Copyright © - INRAE - 2014 - 2022
             Oeso extention ontology for SIXTINE is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</rdfs:comment>
         <rdfs:label xml:lang="en">OpenSILEX - Sixtine - Vigne</rdfs:label>
-        <owl:versionInfo>Version 1.0.0-rc+5 (2022-10-12) created by INRAE</owl:versionInfo>
+        <owl:versionInfo>Version 1.1.0 (2025-02-18) created by INRAE</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -237,6 +237,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasGermplasm">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">Germplasm</rdfs:label>
+        <rdfs:label xml:lang="fr">Matériel génétique</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -823,6 +825,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
     
 
 
@@ -1723,12 +1731,7 @@
     <!-- http://www.opensilex.org/vocabulary/oeso#ScientificObject -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ScientificObject">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasGermplasm"/>
-                <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso#Germplasm"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasReplication"/>
@@ -2251,8 +2254,8 @@
         <rdfs:label xml:lang="fr">ouverture (fnumber)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#attenuatorFilter">
-        <rdfs:label xml:lang="fr">filtre atténuateur</rdfs:label>
         <rdfs:label xml:lang="en">attenuator filter</rdfs:label>
+        <rdfs:label xml:lang="fr">filtre atténuateur</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#brdfP1">
         <rdfs:comment xml:lang="en">BRDF(θ)=P1+P2cos(θ)+1/2*P3(3*cos^2θ−1)+1/2*P4(5*cos^3θ−3*cosθ)</rdfs:comment>
@@ -2265,99 +2268,99 @@
         <rdfs:label xml:lang="en">BRDF P2</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#brdfP3">
-        <rdfs:label xml:lang="en">BRDF P3</rdfs:label>
-        <rdfs:comment xml:lang="en">Bidirectional reflectance distribution function</rdfs:comment>
         <rdfs:comment xml:lang="en">BRDF(θ)=P1+P2cos(θ)+1/2*P3(3*cos^2θ−1)+1/2*P4(5*cos^3θ−3*cosθ)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Bidirectional reflectance distribution function</rdfs:comment>
+        <rdfs:label xml:lang="en">BRDF P3</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#brdfP4">
-        <rdfs:label xml:lang="en">BRDF P4</rdfs:label>
-        <rdfs:comment xml:lang="en">Bidirectional reflectance distribution function</rdfs:comment>
         <rdfs:comment xml:lang="en">BRDF(θ)=P1+P2cos(θ)+1/2*P3(3*cos^2θ−1)+1/2*P4(5*cos^3θ−3*cosθ)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Bidirectional reflectance distribution function</rdfs:comment>
+        <rdfs:label xml:lang="en">BRDF P4</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#dateOfLastCalibration">
         <rdfs:label xml:lang="fr">date de la dernière calibration</rdfs:label>
         <rdfs:label xml:lang="en">date of last calibration</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#dateOfPurchase">
-        <rdfs:label xml:lang="en">date of purchase</rdfs:label>
         <rdfs:label xml:lang="fr">date d&apos;achat</rdfs:label>
+        <rdfs:label xml:lang="en">date of purchase</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#deviceProperty">
-        <rdfs:label xml:lang="fr">propriété d&apos;un équipement</rdfs:label>
         <rdfs:label xml:lang="en">device property</rdfs:label>
+        <rdfs:label xml:lang="fr">propriété d&apos;un équipement</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#focalLength">
-        <rdfs:label xml:lang="fr">longueur focale (mm)</rdfs:label>
         <rdfs:label xml:lang="en">focal length (mm)</rdfs:label>
+        <rdfs:label xml:lang="fr">longueur focale (mm)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#halfFieldOfView">
-        <rdfs:label xml:lang="en">half field of view (°)</rdfs:label>
         <rdfs:label xml:lang="fr">demi angle d&apos;ouverture (°)</rdfs:label>
+        <rdfs:label xml:lang="en">half field of view (°)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasBrand">
-        <rdfs:label xml:lang="fr">constructeur</rdfs:label>
         <rdfs:label xml:lang="en">brand</rdfs:label>
+        <rdfs:label xml:lang="fr">constructeur</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasDate">
-        <rdfs:label xml:lang="fr">date</rdfs:label>
         <rdfs:label xml:lang="en">date</rdfs:label>
+        <rdfs:label xml:lang="fr">date</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasModel">
         <rdfs:label xml:lang="en">Model</rdfs:label>
         <rdfs:label xml:lang="fr">Modèle</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasRadiometricTargetMaterial">
-        <rdfs:label xml:lang="fr">Matière</rdfs:label>
-        <rdfs:label xml:lang="en">Material</rdfs:label>
         <rdfs:comment xml:lang="fr">La valeur doit être dans la liste suivante : Carpet, Paint, Spectralon</rdfs:comment>
         <rdfs:comment xml:lang="en">The value must be in the following list : Carpet, Paint, Spetralon</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+        <rdfs:label xml:lang="fr">Matière</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasSerialNumber">
-        <rdfs:label xml:lang="en">serial number</rdfs:label>
         <rdfs:label xml:lang="fr">numéro de série</rdfs:label>
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasShape">
-        <rdfs:label xml:lang="en">Shape</rdfs:label>
+        <rdfs:comment xml:lang="fr">La valeur doit être dans la liste suivante : Circular, Rectangular</rdfs:comment>
         <rdfs:comment xml:lang="en">The value must be in the following list : Circular, Rectangular</rdfs:comment>
         <rdfs:label xml:lang="fr">Forme</rdfs:label>
-        <rdfs:comment xml:lang="fr">La valeur doit être dans la liste suivante : Circular, Rectangular</rdfs:comment>
+        <rdfs:label xml:lang="en">Shape</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasShapeDiameter">
-        <rdfs:label xml:lang="fr">Diamètre du cercle</rdfs:label>
         <rdfs:label xml:lang="en">Circle diameter</rdfs:label>
+        <rdfs:label xml:lang="fr">Diamètre du cercle</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasShapeLength">
-        <rdfs:label xml:lang="en">Rectangle length</rdfs:label>
         <rdfs:label xml:lang="fr">Longeur du rectangle</rdfs:label>
+        <rdfs:label xml:lang="en">Rectangle length</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#hasShapeWidth">
-        <rdfs:label xml:lang="en">Rectangle width</rdfs:label>
         <rdfs:label xml:lang="fr">Largeur du rectangle</rdfs:label>
+        <rdfs:label xml:lang="en">Rectangle width</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#height">
-        <rdfs:label xml:lang="fr">nombre de pixels en ligne (pixels)</rdfs:label>
         <rdfs:comment>this is the number of pixels per row. The value should be in pixels.</rdfs:comment>
         <rdfs:label xml:lang="en">height (pixels)</rdfs:label>
+        <rdfs:label xml:lang="fr">nombre de pixels en ligne (pixels)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#inServiceDate">
-        <rdfs:label xml:lang="en">in service date</rdfs:label>
         <rdfs:label xml:lang="fr">date de mise en service</rdfs:label>
+        <rdfs:label xml:lang="en">in service date</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#maxWavelength">
-        <rdfs:label xml:lang="en">max wavelength (nm)</rdfs:label>
         <rdfs:label xml:lang="fr">longueur d&apos;onde maximale (nm)</rdfs:label>
+        <rdfs:label xml:lang="en">max wavelength (nm)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#minWavelength">
-        <rdfs:label xml:lang="en">minimum wavelength (nm)</rdfs:label>
         <rdfs:label xml:lang="fr">longueur d&apos;onde minimale (nm)</rdfs:label>
+        <rdfs:label xml:lang="en">minimum wavelength (nm)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#pixelSize">
         <rdfs:label xml:lang="en">pixel size (μm)</rdfs:label>
         <rdfs:label xml:lang="fr">taille du pixel en μm</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#scanAngularResolution">
-        <rdfs:label xml:lang="en">scan angular resolution (°)</rdfs:label>
         <rdfs:label xml:lang="fr">résolution angulaire du scan (°)</rdfs:label>
+        <rdfs:label xml:lang="en">scan angular resolution (°)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#scanningAngularRange">
         <rdfs:label xml:lang="fr">Demi angle de scan (°)</rdfs:label>
@@ -2368,8 +2371,8 @@
         <rdfs:label xml:lang="en">spectral sampling interval</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#spotHeight">
-        <rdfs:label xml:lang="en">spot height (°)</rdfs:label>
         <rdfs:label xml:lang="fr">hauteur de la tâche (°)</rdfs:label>
+        <rdfs:label xml:lang="en">spot height (°)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#spotWidth">
         <rdfs:label xml:lang="fr">Largeur de la tâche (°)</rdfs:label>
@@ -2380,16 +2383,16 @@
         <rdfs:label xml:lang="en">waveband (central wavelength)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#wavelength">
-        <rdfs:label xml:lang="en">wavelength (nm)</rdfs:label>
         <rdfs:label xml:lang="fr">longueur d&apos;onde (nm)</rdfs:label>
+        <rdfs:label xml:lang="en">wavelength (nm)</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#width">
-        <rdfs:label xml:lang="en">width (pixel)</rdfs:label>
         <rdfs:label xml:lang="fr">nombre de pixels en colonne (pixels)</rdfs:label>
+        <rdfs:label xml:lang="en">width (pixel)</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 

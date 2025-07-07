@@ -23,7 +23,7 @@
      xmlns:oeso-sixtine="https://www.opensilex.org/vocabulary/oeso-sixtine#"
      xmlns:sixtine-vigne="http://vegetalunit.inrae.fr/vigne/">
     <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine">
-        <creator>Anne Tireau, Llorenç Cabrera-Bosquet, Pascal Neveu (INRA Montpellier)</creator>
+        <creator>Arnaud Charleroy, Anne Tireau, Lionel Ley, Eric Duchene, Nathalie Ollat , Pascal Neveu</creator>
         <rdfs:comment>INRA MISTEA
             Copyright © - INRAE - 2014 - 2022
             Oeso extention ontology for SIXTINE is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</rdfs:comment>
@@ -1276,7 +1276,7 @@
     <!-- http://www.opensilex.org/vocabulary/oeso#InterRow -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#InterRow">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
         <rdfs:comment xml:lang="fr">Composant de &quot;Parcelle Unitaire&quot; situé entre les rangs d&apos;une culture</rdfs:comment>
         <rdfs:label xml:lang="fr">Inter-Rang</rdfs:label>
         <rdfs:label xml:lang="en">Inter-Row</rdfs:label>
@@ -1375,16 +1375,6 @@
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Actuator"/>
         <rdfs:label xml:lang="en">lightning</rdfs:label>
         <rdfs:label xml:lang="fr">éclairage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#MicroPlot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#MicroPlot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
-        <rdfs:label xml:lang="fr">Micro Parcelle</rdfs:label>
-        <rdfs:label xml:lang="en">Micro Plot</rdfs:label>
     </owl:Class>
     
 
@@ -1521,7 +1511,7 @@
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <rdfs:comment xml:lang="en">A community of plants located on a defined area of a field.</rdfs:comment>
         <rdfs:comment xml:lang="fr">Objet composite comprenant à la fois une &quot;Zone&quot; ainsi que d&apos;autres objets qui lui sont liés parmis la liste non exaustive suivante : son sol, les communautés de plantes qu&apos;elle héberge, etc...</rdfs:comment>
-        <rdfs:label xml:lang="fr">Parcelle Unitaire</rdfs:label>
+        <rdfs:label xml:lang="fr">Parcelle</rdfs:label>
         <rdfs:label xml:lang="en">Plot</rdfs:label>
     </owl:Class>
     
@@ -1720,7 +1710,7 @@
     <!-- http://www.opensilex.org/vocabulary/oeso#Row -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Row">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
         <rdfs:comment xml:lang="fr">Composant de &quot;Parcelle Unitaire&quot; correspondant à un alignement de plantes.</rdfs:comment>
         <rdfs:label xml:lang="fr">Rang</rdfs:label>
         <rdfs:label xml:lang="en">Row</rdfs:label>
@@ -2081,17 +2071,6 @@
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#Weed -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Weed">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="fr">Plante herbacée ou ligneuse qui se trouve dans un agroécosystème sans y avoir été intentionnellement installée</rdfs:comment>
-        <rdfs:label xml:lang="fr">Adventice</rdfs:label>
-        <rdfs:label xml:lang="en">Weed</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso#WeighingScale -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#WeighingScale">
@@ -2120,6 +2099,55 @@
         <rdfs:comment>The signal generator is a shaft angle transducer: potentiometers, alternating and direct current synchros, digital angle-encoder disks, direct reading dials, and rotary switches</rdfs:comment>
         <rdfs:label xml:lang="en">Wind Vane</rdfs:label>
         <rdfs:label xml:lang="fr">Wind Vane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Block -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Block">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:comment xml:lang="fr">Représentation struturelle d&apos;une modalité de facteur à laquelle est attachée des données.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural representation of a factor modality to which data is attached.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Bloc</rdfs:label>
+        <rdfs:label xml:lang="en">Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:label xml:lang="en">Grape</rdfs:label>
+        <rdfs:label xml:lang="fr">Grappe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#ExperimentalUnitPlot -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#ExperimentalUnitPlot">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
+        <rdfs:label xml:lang="en">Experimental unit plot</rdfs:label>
+        <rdfs:label xml:lang="fr">Placette</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasGermplasm"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Plant de vigne</rdfs:label>
+        <rdfs:label xml:lang="en">Vinestock</rdfs:label>
     </owl:Class>
     
 

@@ -1297,7 +1297,7 @@
     <!-- http://www.opensilex.org/vocabulary/oeso#Leaf -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Leaf">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
         <source>skos:closeMatch http://www.ontobee.org/ontology/rdf/PO?iri=http://purl.obolibrary.org/obo/PO_0000036</source>
         <rdfs:comment xml:lang="en">A phyllome vascular system (PO:0025206) that includes the totality of the portions of  vascular tissue in their specific arrangement in a vascular leaf  (PO:0009025). [database_cross_reference:  POC:Ramona_Walls]</rdfs:comment>
         <rdfs:comment xml:lang="fr">Organisme multicellulaire, autotrophe, photosynthétique avec des stades multicellulaires haploïdes et diploïdes, des gamètes produits par mitose ; peut être terrestre ou aquatique.</rdfs:comment>
@@ -1495,24 +1495,14 @@
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Germplasm"/>
-        <rdfs:label xml:lang="fr">Lot de matériel vegetal</rdfs:label>
-        <rdfs:label xml:lang="en">Plant material lot</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso#Plot -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Plot">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <rdfs:comment xml:lang="en">A community of plants located on a defined area of a field.</rdfs:comment>
         <rdfs:comment xml:lang="fr">Objet composite comprenant à la fois une &quot;Zone&quot; ainsi que d&apos;autres objets qui lui sont liés parmis la liste non exaustive suivante : son sol, les communautés de plantes qu&apos;elle héberge, etc...</rdfs:comment>
-        <rdfs:label xml:lang="fr">Parcelle</rdfs:label>
-        <rdfs:label xml:lang="en">Plot</rdfs:label>
+        <rdfs:label xml:lang="fr">Parcelle Unitaire</rdfs:label>
+        <rdfs:label xml:lang="en">Unit Plot</rdfs:label>
     </owl:Class>
     
 
@@ -1677,32 +1667,10 @@
     <!-- http://www.opensilex.org/vocabulary/oeso#RootSystem -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#RootSystem">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
         <rdfs:comment xml:lang="fr">Organe végétal (généralement souterrain) à fonction d&apos;absorption d&apos;eau et de nutriments, d&apos;ancrage dans le milieu suport de la plante, parfois de stockage d&apos;énergie ou de reproduction végétative.</rdfs:comment>
         <rdfs:label xml:lang="en">Root System</rdfs:label>
         <rdfs:label xml:lang="fr">Système Racinaire</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#Rootstock -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Rootstock">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="en">Grape variety used as the underground portion of a grafted vine onto which the scion is grafted. Bred to provide pest resistance and/or adaptability to unfavorable soil or environmental conditions.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Partie (en général souterraine) d&apos;une plante sur laquelle est greffée un &quot;Greffon&quot;; en général choisie pour les qualités de son système racinaire, sa résistance aux maladies et/ou son adaptabilité à des conditions environnementales ou des sols défavorables.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Porte-greffe</rdfs:label>
-        <rdfs:label xml:lang="en">Rootstock</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#RootstockLot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#RootstockLot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot"/>
-        <rdfs:label xml:lang="fr">Lot de Porte-greffe</rdfs:label>
-        <rdfs:label xml:lang="en">Rootstock Lot</rdfs:label>
     </owl:Class>
     
 
@@ -1741,38 +1709,6 @@
         <rdfs:comment xml:lang="fr">Surface délimitée particulière</rdfs:comment>
         <rdfs:label xml:lang="en">Area</rdfs:label>
         <rdfs:label xml:lang="fr">Zone</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#Scion -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Scion">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="en">Is the part of the vine, usually Vitis vinifera, that is grafted on the rootstock and from which wine grapes will be harvested from</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Partie (en général aérienne) d&apos;une plante qui est gréffée sur un &quot;Porte-Greffe&quot;; en général choisie pour les qualités de ses tiges, feuilles, fleurs ou fruits.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Greffon</rdfs:label>
-        <rdfs:label xml:lang="en">Scion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#ScionLot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ScionLot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot"/>
-        <rdfs:label xml:lang="fr">Lot de greffon</rdfs:label>
-        <rdfs:label xml:lang="en">Scion Lot</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#SeedLot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#SeedLot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot"/>
-        <rdfs:label xml:lang="fr">Lot de semence</rdfs:label>
-        <rdfs:label xml:lang="en">Seed Lot</rdfs:label>
     </owl:Class>
     
 
@@ -1842,7 +1778,7 @@
     <!-- http://www.opensilex.org/vocabulary/oeso#SubPlot -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#SubPlot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plot"/>
         <rdfs:comment xml:lang="fr">Principal composant de &quot;Parcelle Unitaire&quot; en général considéré comme un individu statistique permettant de rendre compte de la variabilité au sein de la &quot;Parcelle Unitaire&quot;. L&apos;ensemble de ces composants sera souvent considéré comme représentatif de la &quot;Parcelle Unitaire&quot; qu&apos;ils composent, sauf si l&apos;un d&apos;eux a subi un effet qui le disqualifie (dégats, adventice, etc...).</rdfs:comment>
         <rdfs:label xml:lang="fr">Sous-Parcelle Unitaire</rdfs:label>
         <rdfs:label xml:lang="en">SubPlot</rdfs:label>
@@ -2061,16 +1997,6 @@
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#Vitroplant -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Vitroplant">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot"/>
-        <rdfs:label xml:lang="fr">Lot de Vitroplant</rdfs:label>
-        <rdfs:label xml:lang="en">Vitroplant Lot</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso#WeighingScale -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#WeighingScale">
@@ -2107,8 +2033,8 @@
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Block">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="fr">Représentation struturelle d&apos;une modalité de facteur à laquelle est attachée des données.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Structural representation of a factor modality to which data is attached.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Représentation struturelle d&apos;une ou plusieurs modalité(s) de facteur à laquelle est attachée des données.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural representation of one or several factor modality(-ies) to which data is attached.</rdfs:comment>
         <rdfs:label xml:lang="fr">Bloc</rdfs:label>
         <rdfs:label xml:lang="en">Block</rdfs:label>
     </owl:Class>
@@ -2118,7 +2044,7 @@
     <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
         <rdfs:label xml:lang="en">Grape</rdfs:label>
         <rdfs:label xml:lang="fr">Grappe</rdfs:label>
     </owl:Class>
@@ -2131,6 +2057,16 @@
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
         <rdfs:label xml:lang="en">Experimental unit plot</rdfs:label>
         <rdfs:label xml:lang="fr">Placette</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:comment xml:lang="fr">Structure anatomique végétale qui réalise une certaine fonction.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Organe de plante</rdfs:label>
     </owl:Class>
     
 
@@ -2148,6 +2084,15 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="fr">Plant de vigne</rdfs:label>
         <rdfs:label xml:lang="en">Vinestock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Weed -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Weed">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Canopy"/>
+        <rdfs:label xml:lang="fr">Adventice</rdfs:label>
     </owl:Class>
     
 

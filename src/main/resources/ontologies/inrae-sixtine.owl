@@ -1298,9 +1298,9 @@
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Leaf">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
-        <source>skos:closeMatch http://www.ontobee.org/ontology/rdf/PO?iri=http://purl.obolibrary.org/obo/PO_0000036</source>
-        <rdfs:comment xml:lang="en">A phyllome vascular system (PO:0025206) that includes the totality of the portions of  vascular tissue in their specific arrangement in a vascular leaf  (PO:0009025). [database_cross_reference:  POC:Ramona_Walls]</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Organisme multicellulaire, autotrophe, photosynthétique avec des stades multicellulaires haploïdes et diploïdes, des gamètes produits par mitose ; peut être terrestre ou aquatique.</rdfs:comment>
+        <source>http://opendata.inrae.fr/gao/20010</source>
+        <rdfs:comment xml:lang="en">A phyllome (PO:0006001) that is not associated with a reproductive structure</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Phyllome (PO:0006001) n&apos;étant pas associé à une structure reproductive</rdfs:comment>
         <rdfs:label xml:lang="fr">Feuille</rdfs:label>
         <rdfs:label xml:lang="en">Leaf</rdfs:label>
     </owl:Class>
@@ -1668,7 +1668,13 @@
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#RootSystem">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
-        <rdfs:comment xml:lang="fr">Organe végétal (généralement souterrain) à fonction d&apos;absorption d&apos;eau et de nutriments, d&apos;ancrage dans le milieu suport de la plante, parfois de stockage d&apos;énergie ou de reproduction végétative.</rdfs:comment>
+        <source>http://opendata.inrae.fr/gao/40010</source>
+        <rdfs:comment xml:lang="en">A plant axis (PO:0025004) that lacks shoot axis nodes (PO:0005004) and usually grows indeterminately.
+
+Synonym : Root</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Axe végétal (PO:0025004) dépourvu  de tige et de noeud (PO:0005004) et qui pousse généralement de manière indéterminée.
+
+Synonyme: Racine</rdfs:comment>
         <rdfs:label xml:lang="en">Root System</rdfs:label>
         <rdfs:label xml:lang="fr">Système Racinaire</rdfs:label>
     </owl:Class>
@@ -2029,6 +2035,19 @@
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Baie -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Baie">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+        <source>http://opendata.inrae.fr/gao/30050</source>
+        <rdfs:comment xml:lang="en">A fruit (PO:0009001) which at maturity comprises a fleshy endocarp (PO:0009086), fleshy mesocarp (PO:0009087), and fleshy exocarp (PO:0009085)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Fruit (PO : 0009001) qui, à maturité, comprend un endocarpe charnu (PO : 0009086), un mésocarpe charnu (PO : 0009087) et un exocarpe charnu (PO : 0009085).</rdfs:comment>
+        <rdfs:label xml:lang="fr">Baie</rdfs:label>
+        <rdfs:label xml:lang="en">Berry</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Block -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Block">
@@ -2045,7 +2064,12 @@
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
-        <rdfs:label xml:lang="en">Grape</rdfs:label>
+        <source>http://opendata.inrae.fr/gao/30060</source>
+        <rdfs:comment xml:lang="fr">Infructescence : système de pousses reproductrices (PO : 0025082) qui se développe à partir d&apos;une inflorescence (PO : 0009049) et qui est une partie de chaque axe d&apos;infructescence (PO : 0025242) et tous les fruits (PO : 0009001) portés par ces axes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Infructescence: a reproductive shoot system (PO:0025082) that develops from an inflorescence (PO:0009049) and has as parts each infructescence axis (PO:0025242) and all of the fruits (PO:0009001) borne by those axes. 
+
+Synonym : Bunch</rdfs:comment>
+        <rdfs:label xml:lang="en">Cluster</rdfs:label>
         <rdfs:label xml:lang="fr">Grappe</rdfs:label>
     </owl:Class>
     
@@ -2067,6 +2091,45 @@
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <rdfs:comment xml:lang="fr">Structure anatomique végétale qui réalise une certaine fonction.</rdfs:comment>
         <rdfs:label xml:lang="fr">Organe de plante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+        <source>http://opendata.inrae.fr/gao/20030</source>
+        <rdfs:comment xml:lang="en">A collective plant organ structure (PO:0025007) that produces shoot-borne portions of meristem tissue (PO:0009013) and the plant structures (PO:0009011) that arise from them</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Structure collective d&apos;organe végétatif (PO:0025007) qui produit des morceaux de pousses issus de tissus méristématiques (PO:0009013) et les structures végétales (PO:0009011) qui en découlent.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Rameau</rdfs:label>
+        <rdfs:label xml:lang="en">Shoot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau_principal -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau_principal">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau"/>
+        <source>http://opendata.inrae.fr/gao/20031</source>
+        <rdfs:comment xml:lang="fr">Rameau issue d&apos;un bourgeon hivernal primaire</rdfs:comment>
+        <rdfs:comment xml:lang="en">shoot arising from a primary winter bud</rdfs:comment>
+        <rdfs:label xml:lang="en">Primary shoot</rdfs:label>
+        <rdfs:label xml:lang="fr">Rameau principal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau_secondaire -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau_secondaire">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Rameau"/>
+        <source>http://opendata.inrae.fr/gao/20032</source>
+        <rdfs:comment xml:lang="fr">Rameau issue d&apos;un bourgeon hivernal secondaire</rdfs:comment>
+        <rdfs:comment xml:lang="en">Shoot arising from a secondary winter bud</rdfs:comment>
+        <rdfs:label xml:lang="fr">Rameau secondaire</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary shoot</rdfs:label>
     </owl:Class>
     
 
@@ -2367,5 +2430,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

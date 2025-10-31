@@ -914,10 +914,11 @@
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Canopy">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="fr">Couverture végétale vivante qui est semée ou pousse de manière spontannée pendant ou après une culture principale, puis généralement détruite avant la plantation de la culture suivante.  (Hartwig NL. and Ammon HU., 2002).
+        <source>Definition: Nathan L. Hartwig, and Hans Ulrich Ammon. “Cover Crops and Living Mulches.” Weed Science, vol. 50, no. 6, 2002, pp. 688–99. JSTOR, http://www.jstor.org/stable/4046641. Accessed 31 Oct. 2025.</source>
+        <rdfs:comment xml:lang="fr">Couverture végétale vivante qui est semée ou pousse de manière spontannée pendant ou après une culture principale, puis généralement détruite avant la plantation de la culture suivante. 
 
 Synonyme: Couverture végétale</rdfs:comment>
-        <rdfs:comment xml:lang="en">Living ground cover that is planted or grows spontaneously into or after a main crop and then commonly killed before the next crop is planted (Hartwig NL. and Ammon HU., 2002).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Living ground cover that is planted or grows spontaneously into or after a main crop and then commonly killed before the next crop is planted.</rdfs:comment>
         <rdfs:label xml:lang="fr">Couvert végétal</rdfs:label>
         <rdfs:label xml:lang="en">Cover crop</rdfs:label>
     </owl:Class>
@@ -1492,8 +1493,9 @@ Synonyme: Couverture végétale</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Plant">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <source>skos:closeMatch http://www.ontobee.org/ontology/rdf/PO?iri=http://purl.obolibrary.org/obo/PO_0000003</source>
-        <rdfs:comment xml:lang="en">the continuous organism originating from a single seed, callus, rhizome or any other propagation mean</rdfs:comment>
+        <source>http://www.ontobee.org/ontology/rdf/PO?iri=http://purl.obolibrary.org/obo/PO_0000003</source>
+        <rdfs:comment xml:lang="en">A plant structure (PO:0005679) which is a whole organism</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une structure végétale (PO:0005679) qui est un organisme entier</rdfs:comment>
         <rdfs:label xml:lang="en">Plant</rdfs:label>
         <rdfs:label xml:lang="fr">Plante</rdfs:label>
     </owl:Class>
@@ -1504,8 +1506,8 @@ Synonyme: Couverture végétale</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Plot">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="en">A community of plants located on a defined area of a field.</rdfs:comment>
         <rdfs:comment xml:lang="fr">Objet composite délimité spatialement ainsi que d&apos;autres objets qui lui sont liés parmis la liste non exaustive suivante : son sol, les communautés de plantes qu&apos;elle héberge, etc...</rdfs:comment>
+        <rdfs:comment xml:lang="en">Spatially delimited composite object, as well as other objects related to it from the following non-exhaustive list: its soil, the plant communities it hosts, etc.</rdfs:comment>
         <rdfs:label xml:lang="fr">Parcelle Unitaire</rdfs:label>
         <rdfs:label xml:lang="en">Unit Plot</rdfs:label>
     </owl:Class>
@@ -1707,6 +1709,9 @@ Synonyme: Couverture végétale</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="fr">Entité physique qui est la principale unité d&apos;intérêt, sur laquelle sont réalisées des observations, mesures ou prélèvements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Physical entity that is the main unit of interest, on which observations, measurements, or samples are taken.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Objet Scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">Scientific Object</rdfs:label>
     </owl:Class>
     
 
@@ -1777,7 +1782,8 @@ Synonyme: Couverture végétale</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#SubPlot">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plot"/>
-        <rdfs:comment xml:lang="fr">Découpage de la &quot;Parcelle Unitaire&quot; par besoin de gestion agronomique</rdfs:comment>
+        <rdfs:comment xml:lang="en">Division of the “Unitary Plot” according to agronomic management needs</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Découpage de la &quot;Parcelle Unitaire&quot; par besoin de gestion agronomique.</rdfs:comment>
         <rdfs:label xml:lang="fr">Sous-Parcelle Unitaire</rdfs:label>
         <rdfs:label xml:lang="en">SubPlot</rdfs:label>
     </owl:Class>
@@ -1942,8 +1948,9 @@ Synonyme: Couverture végétale</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tree">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plant"/>
-        <rdfs:comment xml:lang="en">A woody perennial plant with a single main stem, or in the case of coppice with multiple stems, with a more or less defined crown.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Plante vivace ligneuse à une seule tige principale, ou dans le cas des taillis à plusieurs tiges, à couronne plus ou moins définie.</rdfs:comment>
+        <source>Definition: Philip Wilson. The meaning of ’tree’. The Arb Magazine : Newsletter of the Arbori-cultural Association, 166 :32–33, 01 2014.</source>
+        <rdfs:comment xml:lang="en">Perennial woody plant growing to a considerable height and size, with a self-supporting main stem and usually developing branches at some distance from the ground.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Plante ligneuse vivace atteignant une hauteur et une taille considérables, avec une tige principale autoportante et développant généralement des branches à une certaine distance du sol.</rdfs:comment>
         <rdfs:label xml:lang="fr">Arbre</rdfs:label>
         <rdfs:label xml:lang="en">Tree</rdfs:label>
     </owl:Class>
@@ -2061,8 +2068,8 @@ Synonyme: Couverture végétale</rdfs:comment>
         <rdfs:comment xml:lang="fr">Infructescence : système de pousses reproductrices (PO : 0025082) qui se développe à partir d&apos;une inflorescence (PO : 0009049) et qui est une partie de chaque axe d&apos;infructescence (PO : 0025242) et tous les fruits (PO : 0009001) portés par ces axes.</rdfs:comment>
         <rdfs:comment xml:lang="en">Infructescence: a reproductive shoot system (PO:0025082) that develops from an inflorescence (PO:0009049) and has as parts each infructescence axis (PO:0025242) and all of the fruits (PO:0009001) borne by those axes. 
 
-Synonym : Bunch</rdfs:comment>
-        <rdfs:label xml:lang="en">Cluster</rdfs:label>
+Synonym : Grappe cluster</rdfs:comment>
+        <rdfs:label xml:lang="en">Bunch</rdfs:label>
         <rdfs:label xml:lang="fr">Grappe</rdfs:label>
     </owl:Class>
     
@@ -2077,7 +2084,7 @@ Synonym : Bunch</rdfs:comment>
 Synonym : Micro plot</rdfs:comment>
         <rdfs:comment xml:lang="fr">Principal composant de &quot;Parcelle Unitaire&quot; en général considéré comme un individu statistique permettant de rendre compte de la variabilité au sein de la &quot;Parcelle Unitaire&quot;. L&apos;ensemble de ces composants sera souvent considéré comme représentatif de la &quot;Parcelle Unitaire&quot; qu&apos;ils composent, sauf si l&apos;un d&apos;eux a subi un effet qui le discalifie (dégats, adventice, etc...).
 
-Synonyme :  Sous parcelle unitaire; Micro parcelle</rdfs:comment>
+Synonyme :  Micro parcelle</rdfs:comment>
         <rdfs:label xml:lang="en">Experimental unit plot</rdfs:label>
         <rdfs:label xml:lang="fr">Placette</rdfs:label>
     </owl:Class>
@@ -2101,12 +2108,15 @@ Synonyme :  Sous parcelle unitaire; Micro parcelle</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Must">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <source>URI: http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must
+        <source xml:lang="fr">URI: http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must
 
-Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 39. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
-        <rdfs:comment xml:lang="fr">Produit liquide obtenu à partir du raisin frais, soit spontanément, soit par les procédés physiques tels que : foulage, égrappage, éraflage ou dérâpage, égouttage, pressurage.</rdfs:comment>
-        <rdfs:comment>Liquid product obtained from fresh grapes, whether spontaneously or by physical processes such as: crushing, removing stems from grape berries or crushed grapes,
+Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
+        <source xml:lang="en">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
+
+Definition : International Organisation of Vine and Wine (2021). International code of oenological practices [PDF file]. pp. 454. https://www.oiv.int/sites/default/files/publication/2025-04/CPO%202025%20EN.pdf</source>
+        <rdfs:comment xml:lang="en">Liquid product obtained from fresh grapes, whether spontaneously or by physical processes such as: crushing, removing stems from grape berries or crushed grapes,
 draining, pressing.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Produit liquide obtenu à partir du raisin frais, soit spontanément, soit par les procédés physiques tels que : foulage, égrappage, éraflage ou dérâpage, égouttage, pressurage.</rdfs:comment>
         <rdfs:label xml:lang="fr">Moût</rdfs:label>
         <rdfs:label xml:lang="en">Must</rdfs:label>
     </owl:Class>
@@ -2126,20 +2136,12 @@ draining, pressing.</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#PottedVineStock -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#PottedVineStock">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plant"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#PrimaryShoot -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#PrimaryShoot">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Shoot"/>
         <source>http://opendata.inrae.fr/gao/20031</source>
-        <rdfs:comment xml:lang="fr">Sarment issue d&apos;un bourgeon hivernal primaire</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Rameau issue d&apos;un bourgeon hivernal primaire</rdfs:comment>
         <rdfs:comment xml:lang="en">shoot arising from a primary winter bud</rdfs:comment>
         <rdfs:label xml:lang="en">Primary shoot</rdfs:label>
         <rdfs:label xml:lang="fr">Rameau principal</rdfs:label>
@@ -2162,7 +2164,7 @@ draining, pressing.</rdfs:comment>
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#SecondaryShoot">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Shoot"/>
         <source>http://opendata.inrae.fr/gao/20032</source>
-        <rdfs:comment xml:lang="fr">Sarment issue d&apos;un bourgeon hivernal secondaire</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Rameau issue d&apos;un bourgeon hivernal secondaire</rdfs:comment>
         <rdfs:comment xml:lang="en">Shoot arising from a secondary winter bud</rdfs:comment>
         <rdfs:label xml:lang="fr">Rameau secondaire</rdfs:label>
         <rdfs:label xml:lang="en">Secondary shoot</rdfs:label>
@@ -2176,9 +2178,7 @@ draining, pressing.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/20030</source>
         <rdfs:comment xml:lang="en">A collective plant organ structure (PO:0025007) that produces shoot-borne portions of meristem tissue (PO:0009013) and the plant structures (PO:0009011) that arise from them</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Structure collective d&apos;organe végétatif (PO:0025007) qui produit des morceaux de pousses issus de tissus méristématiques (PO:0009013) et les structures végétales (PO:0009011) qui en découlent.
-
-Synonyme : Sarment</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Structure collective d&apos;organe végétatif (PO:0025007) qui produit des morceaux de pousses issus de tissus méristématiques (PO:0009013) et les structures végétales (PO:0009011) qui en découlent.</rdfs:comment>
         <rdfs:label xml:lang="fr">Rameau</rdfs:label>
         <rdfs:label xml:lang="en">Shoot</rdfs:label>
     </owl:Class>
@@ -2219,6 +2219,12 @@ Synonyme : Sarment</rdfs:comment>
                 <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Plante entière de vigne comprenant l&apos;ensemble des organes.
+
+Synonyme: Plant de vigne</rdfs:comment>
+        <rdfs:comment xml:lang="en">The entire vine plant, including all of its organs.
+
+Synonym : Vine</rdfs:comment>
         <rdfs:label xml:lang="fr">Cep</rdfs:label>
         <rdfs:label xml:lang="en">Vinestock</rdfs:label>
     </owl:Class>
@@ -2229,8 +2235,9 @@ Synonyme : Sarment</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Weed">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Canopy"/>
-        <rdfs:comment xml:lang="en">Any plant growing in a cultivated field without having been intentionally planted there by the farmer that year</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Toute plante poussant dans un champ cultivé, sans y avoir été intentionnellement mise par l’agriculteur cette année-là</rdfs:comment>
+        <source>Definition: Biswanath Saha, Chaichi Devi, Meena Khwairakpam, and Ajay S.Kalamdhad. Vermicomposting and anaerobic digestion – viable alternative options for terrestrial weed management – a review. Biotechnology Reports, 17 :70–76, 2018. https://doi.org/10.1016/j.btre.2017.11.005.</source>
+        <rdfs:comment xml:lang="fr">Plantes indésirables qui poussent à des endroits et à des périodes inopportunes, entrant en concurrence avec les cultures et pouvant causer des pertes économiques.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Uninvited plants which are grown in undesirable place and period causing competition for cultivated crops and can do economic loss.</rdfs:comment>
         <rdfs:label xml:lang="fr">Adventice</rdfs:label>
         <rdfs:label xml:lang="en">Weed</rdfs:label>
     </owl:Class>
@@ -2241,10 +2248,29 @@ Synonyme : Sarment</rdfs:comment>
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Wine">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <source>http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine</source>
-        <rdfs:comment xml:lang="fr">Boisson fermentée préparée à partir de raisin ou de jus de raisin frais. (Définition larousse)</rdfs:comment>
+        <source xml:lang="en">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
+
+Definition : International Organisation of Vine and Wine (2021). International code of oenological practices [PDF file]. pp. 454. https://www.oiv.int/sites/default/files/publication/2025-04/CPO%202025%20EN.pdf</source>
+        <source xml:lang="fr">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
+
+Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
+        <rdfs:comment xml:lang="fr">Le vin est exclusivement la boisson résultant de la fermentation alcoolique complète ou partielle du raisin frais, foulé ou non, ou du moût de raisin. Son titre alcoométrique acquis ne peut être inférieur à 8,5% volume (il peut toutefois etre exceptionnellement raméne  7% volume dans certains cas).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Wine is the beverage resulting exclusively from the partial or complete alcoholic fermentation of fresh grapes, whether crushed or not, or of grape must. Its actual alcohol content shall not be less than 8.5% vol (However, it may exceptionally be reduced to 7% by volume.</rdfs:comment>
         <rdfs:label xml:lang="fr">Vin</rdfs:label>
         <rdfs:label xml:lang="en">Wine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#petiole -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#petiole">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+        <source>https://browser.planteome.org/amigo/term/PO:0020038</source>
+        <rdfs:comment xml:lang="en">A stalk (PO:0025066) of a vascular leaf (PO:0009025).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Tige (PO : 0025066) d&apos;une feuille vasculaire (PO : 0009025).</rdfs:comment>
+        <rdfs:label xml:lang="en">petiole</rdfs:label>
+        <rdfs:label xml:lang="fr">petiole</rdfs:label>
     </owl:Class>
     
 

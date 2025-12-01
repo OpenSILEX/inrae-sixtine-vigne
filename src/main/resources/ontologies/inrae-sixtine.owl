@@ -1055,8 +1055,8 @@ Synonyme: Couverture végétale</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#Facility -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Facility">
-        <rdfs:label xml:lang="fr">Plateforme</rdfs:label>
-        <rdfs:label xml:lang="en">Platform</rdfs:label>
+        <rdfs:label xml:lang="en">Facility</rdfs:label>
+        <rdfs:label xml:lang="fr">Installation environnementale</rdfs:label>
     </owl:Class>
     
 

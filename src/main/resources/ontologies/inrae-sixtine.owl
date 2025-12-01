@@ -828,12 +828,6 @@
     
 
 
-    <!-- http://org.semanticweb.owlapi/error#Error1 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso#Accession -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Accession">
@@ -1700,7 +1694,6 @@ Synonyme: Couverture végétale</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ScientificObject -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ScientificObject">
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasReplication"/>

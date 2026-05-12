@@ -14,6 +14,7 @@
      xmlns:oeso="http://www.opensilex.org/vocabulary/oeso-ext#"
      xmlns:peco="http://purl.obolibrary.org/obo/peco.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:rdf4j="http://rdf4j.org/schema/rdf4j#"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
@@ -22,13 +23,14 @@
      xmlns:vocabulary="http://www.opensilex.org/vocabulary/oeso#"
      xmlns:oeso-sixtine="https://www.opensilex.org/vocabulary/oeso-sixtine#"
      xmlns:sixtine-vigne="http://vegetalunit.inrae.fr/vigne/">
-    <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine">
-        <creator>Arnaud Charleroy, Anne Tireau, Lionel Ley, Eric Duchene, Nathalie Ollat , Pascal Neveu</creator>
-        <rdfs:comment>INRA MISTEA
-            Copyright © - INRAE - 2014 - 2022
+    <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis">
+        <owl:versionIRI rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis/2.0.0"/>
+        <creator>Arnaud Charleroy, Sandrine Vrignon, Anne Tireau, Lionel Ley, Eric Duchene, Nathalie Ollat , Pascal Neveu</creator>
+        <rdfs:comment>INRAE MISTEA
+            Copyright © - INRAE - 2014 - 2026
             Oeso extention ontology for SIXTINE is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</rdfs:comment>
-        <rdfs:label xml:lang="en">OpenSILEX - Sixtine - Vigne</rdfs:label>
-        <owl:versionInfo>Version 1.1.0 (2025-02-18) created by INRAE</owl:versionInfo>
+        <rdfs:label xml:lang="fr">OpenSILEX - Vitis</rdfs:label>
+        <owl:versionInfo>Version 2.0.0 (2026-05-12) created by INRAE</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -53,6 +55,18 @@
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
     
 
 
@@ -828,6 +842,39 @@
     
 
 
+    <!-- http://opendata.inrae.fr/PO2/Ontology/TransformON/c_PbmsDB -->
+
+    <owl:Class rdf:about="http://opendata.inrae.fr/PO2/Ontology/TransformON/c_PbmsDB">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <source xml:lang="fr">URI: http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must
+
+Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
+        <source xml:lang="en">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
+
+Definition : International Organisation of Vine and Wine (2021). International code of oenological practices [PDF file]. pp. 454. https://www.oiv.int/sites/default/files/publication/2025-04/CPO%202025%20EN.pdf</source>
+        <rdfs:comment xml:lang="en">Liquid product obtained from fresh grapes, whether spontaneously or by physical processes such as: crushing, removing stems from grape berries or crushed grapes,
+draining, pressing.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Produit liquide obtenu à partir du raisin frais, soit spontanément, soit par les procédés physiques tels que : foulage, égrappage, éraflage ou dérâpage, égouttage, pressurage.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Moût</rdfs:label>
+        <rdfs:label xml:lang="en">Must</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://opendata.inrae.fr/PO2/Ontology/TransformON/c_zfYlsr -->
+
+    <owl:Class rdf:about="http://opendata.inrae.fr/PO2/Ontology/TransformON/c_zfYlsr">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <source xml:lang="en">International Code of Oenological Practices (2024), Code International des Pratiques Œnologiques (2021). ::@fr: Son titre alcoométrique acquis ne peut être inférieur à 8,5% vol. Toutefois, compte tenu des conditions de climat, de terroir ou de cépage, de facteurs qualitatifs spéciaux ou de traditions propres à certains vignobles, le titre alcoométrique total minimal pourra être ramené à 7% vol. par une législation particulière à la région considérée. ::@en: Its actual alcohol content shall not be less than 8.5% vol. Nevertheless, taking into account climate, soil, vine variety, special qualitative factors or traditions specific to certain vineyards, the minimum total alcohol content may be able to be reduced to 7% vol. by legislation particular to the region considered.</source>
+        <source xml:lang="fr">International Code of Oenological Practices (2024), Code International des Pratiques Œnologiques (2021). ::@fr: Son titre alcoométrique acquis ne peut être inférieur à 8,5% vol. Toutefois, compte tenu des conditions de climat, de terroir ou de cépage, de facteurs qualitatifs spéciaux ou de traditions propres à certains vignobles, le titre alcoométrique total minimal pourra être ramené à 7% vol. par une législation particulière à la région considérée. ::@en: Its actual alcohol content shall not be less than 8.5% vol. Nevertheless, taking into account climate, soil, vine variety, special qualitative factors or traditions specific to certain vineyards, the minimum total alcohol content may be able to be reduced to 7% vol. by legislation particular to the region considered.</source>
+        <rdfs:comment xml:lang="en">A beverage resulting exclusively from the partial or complete alcoholic fermentation of fresh grapes, whether crushed or not, or of grape must.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Boisson résultant exclusivement de la fermentation alcoolique complète ou partielle du raisin frais, foulé ou non, ou du moût de raisin.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Vin</rdfs:label>
+        <rdfs:label xml:lang="en">Wine</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#Accession -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Accession">
@@ -900,21 +947,6 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Camera</rdfs:label>
         <rdfs:label xml:lang="fr">Camera</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#Canopy -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Canopy">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <source>Definition: Nathan L. Hartwig, and Hans Ulrich Ammon. “Cover Crops and Living Mulches.” Weed Science, vol. 50, no. 6, 2002, pp. 688–99. JSTOR, http://www.jstor.org/stable/4046641. Accessed 31 Oct. 2025.</source>
-        <rdfs:comment xml:lang="fr">Couverture végétale vivante qui est semée ou pousse de manière spontannée pendant ou après une culture principale, puis généralement détruite avant la plantation de la culture suivante. 
-
-Synonyme: Couverture végétale</rdfs:comment>
-        <rdfs:comment xml:lang="en">Living ground cover that is planted or grows spontaneously into or after a main crop and then commonly killed before the next crop is planted.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Couvert végétal</rdfs:label>
-        <rdfs:label xml:lang="en">Cover crop</rdfs:label>
     </owl:Class>
     
 
@@ -1275,7 +1307,7 @@ Synonyme: Couverture végétale</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#InterRow -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#InterRow">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent"/>
         <rdfs:comment xml:lang="en">Component of a “Unitary Plot” located between rows of a crop</rdfs:comment>
         <rdfs:comment xml:lang="fr">Composant de &quot;Parcelle Unitaire&quot; situé entre les rangs d&apos;une culture</rdfs:comment>
         <rdfs:label xml:lang="fr">Inter-Rang</rdfs:label>
@@ -1290,19 +1322,6 @@ Synonyme: Couverture végétale</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Actuator"/>
         <rdfs:label xml:lang="en">irrigation system</rdfs:label>
         <rdfs:label xml:lang="fr">système d&apos;irrigation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#Leaf -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Leaf">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
-        <source>http://opendata.inrae.fr/gao/20010</source>
-        <rdfs:comment xml:lang="en">A phyllome (PO:0006001) that is not associated with a reproductive structure</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Phyllome (PO:0006001) n&apos;étant pas associé à une structure reproductive</rdfs:comment>
-        <rdfs:label xml:lang="fr">Feuille</rdfs:label>
-        <rdfs:label xml:lang="en">Leaf</rdfs:label>
     </owl:Class>
     
 
@@ -1496,30 +1515,6 @@ Synonyme: Couverture végétale</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#Plot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Plot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="fr">Objet composite délimité spatialement ainsi que d&apos;autres objets qui lui sont liés parmis la liste non exaustive suivante : son sol, les communautés de plantes qu&apos;elle héberge, etc...</rdfs:comment>
-        <rdfs:comment xml:lang="en">Spatially delimited composite object, as well as other objects related to it from the following non-exhaustive list: its soil, the plant communities it hosts, etc.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Parcelle Unitaire</rdfs:label>
-        <rdfs:label xml:lang="en">Unit Plot</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#PlotComponent -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#PlotComponent">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <rdfs:comment xml:lang="en">Component corresponding to a subdivision of “Unit Parcel”</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Composant correspondant à une subdivison de &quot;Parcelle Unitaire&quot;</rdfs:comment>
-        <rdfs:label xml:lang="fr">Composant Parcellaire</rdfs:label>
-        <rdfs:label xml:lang="en">Plot Component</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso#PrecipitationSensor -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#PrecipitationSensor">
@@ -1669,7 +1664,7 @@ Synonyme: Couverture végétale</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#Root -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Root">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/40010</source>
         <rdfs:comment xml:lang="en">A plant axis (PO:0025004) that lacks shoot axis nodes (PO:0005004) and usually grows indeterminately.</rdfs:comment>
         <rdfs:comment xml:lang="fr">Axe végétal (PO:0025004) dépourvu de nœuds d&apos;axe de pousse (PO:0005004) et qui pousse généralement de manière indéterminée.</rdfs:comment>
@@ -1682,7 +1677,7 @@ Synonyme: Couverture végétale</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#Row -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Row">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent"/>
         <rdfs:comment xml:lang="en">Component of “Unitary Plot” corresponding to a row of plants.</rdfs:comment>
         <rdfs:comment xml:lang="fr">Composant de &quot;Parcelle Unitaire&quot; correspondant à un alignement de plantes.</rdfs:comment>
         <rdfs:label xml:lang="fr">Rang</rdfs:label>
@@ -1767,18 +1762,6 @@ Synonyme: Couverture végétale</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#SensingDevice"/>
         <rdfs:label xml:lang="en">spectroradiometer</rdfs:label>
         <rdfs:label xml:lang="fr">spectroradiometre</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#SubPlot -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#SubPlot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plot"/>
-        <rdfs:comment xml:lang="en">Division of the “Unitary Plot” according to agronomic management needs</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Découpage de la &quot;Parcelle Unitaire&quot; par besoin de gestion agronomique.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Sous-Parcelle Unitaire</rdfs:label>
-        <rdfs:label xml:lang="en">SubPlot</rdfs:label>
     </owl:Class>
     
 
@@ -2028,10 +2011,10 @@ Synonyme: Couverture végétale</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Berry -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Berry -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Berry">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Berry">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/30050</source>
         <rdfs:comment xml:lang="en">A fruit (PO:0009001) which at maturity comprises a fleshy endocarp (PO:0009086), fleshy mesocarp (PO:0009087), and fleshy exocarp (PO:0009085)</rdfs:comment>
         <rdfs:comment xml:lang="fr">Fruit (PO : 0009001) qui, à maturité, comprend un endocarpe charnu (PO : 0009086), un mésocarpe charnu (PO : 0009087) et un exocarpe charnu (PO : 0009085).</rdfs:comment>
@@ -2041,9 +2024,9 @@ Synonyme: Couverture végétale</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Block -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Block -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Block">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Block">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <rdfs:comment xml:lang="fr">Représentation struturelle d&apos;une ou plusieurs modalité(s) de facteur à laquelle est attachée des données.</rdfs:comment>
         <rdfs:comment xml:lang="en">Structural representation of one or several factor modality(-ies) to which data is attached.</rdfs:comment>
@@ -2053,10 +2036,10 @@ Synonyme: Couverture végétale</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Bunch -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Bunch">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Bunch">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/30060</source>
         <rdfs:comment xml:lang="fr">Infructescence : système de pousses reproductrices (PO : 0025082) qui se développe à partir d&apos;une inflorescence (PO : 0009049) et qui est une partie de chaque axe d&apos;infructescence (PO : 0025242) et tous les fruits (PO : 0009001) portés par ces axes.</rdfs:comment>
         <rdfs:comment xml:lang="en">Infructescence: a reproductive shoot system (PO:0025082) that develops from an inflorescence (PO:0009049) and has as parts each infructescence axis (PO:0025242) and all of the fruits (PO:0009001) borne by those axes. 
@@ -2068,26 +2051,66 @@ Synonym : Grappe cluster</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#ExperimentalUnitPlot -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#CoverCrop -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#ExperimentalUnitPlot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
-        <rdfs:comment xml:lang="en">Main component of a “unit plot,” generally considered to be a statistical individual that accounts for variability within the “unit plot.” All of these components will often be considered representative of the “unit plot” they comprise, unless one of them has been affected by something that disqualifies it (damage, weeds, etc.).
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#CoverCrop">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <source>Definition: Nathan L. Hartwig, and Hans Ulrich Ammon. “Cover Crops and Living Mulches.” Weed Science, vol. 50, no. 6, 2002, pp. 688–99. JSTOR, http://www.jstor.org/stable/4046641. Accessed 31 Oct. 2025.</source>
+        <rdfs:comment xml:lang="fr">Couverture végétale vivante qui est semée ou pousse de manière spontannée pendant ou après une culture principale, puis généralement détruite avant la plantation de la culture suivante. 
 
-Synonym : Micro plot</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Principal composant de &quot;Parcelle Unitaire&quot; en général considéré comme un individu statistique permettant de rendre compte de la variabilité au sein de la &quot;Parcelle Unitaire&quot;. L&apos;ensemble de ces composants sera souvent considéré comme représentatif de la &quot;Parcelle Unitaire&quot; qu&apos;ils composent, sauf si l&apos;un d&apos;eux a subi un effet qui le discalifie (dégats, adventice, etc...).
-
-Synonyme :  Micro parcelle</rdfs:comment>
-        <rdfs:label xml:lang="en">Experimental unit plot</rdfs:label>
-        <rdfs:label xml:lang="fr">Placette</rdfs:label>
+Synonyme: Couverture végétale</rdfs:comment>
+        <rdfs:comment xml:lang="en">Living ground cover that is planted or grows spontaneously into or after a main crop and then commonly killed before the next crop is planted.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Couvert végétal</rdfs:label>
+        <rdfs:label xml:lang="en">Cover crop</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Inflorescence -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#ExperimentalPlot -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Inflorescence">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#ExperimentalPlot">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent"/>
+        <rdfs:comment xml:lang="en">An experimental plot or experimental plot is an experimental unit corresponding to a typically rectangular (but not necessarily) area of land large enough to receive an experimental treatment and allow for observation. Consequently, an experimental plot is large enough to cultivate one or more plants.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une placette expérimentale est une unité expérimentale correspondant à une zone de terrain généralement de forme rectangulaire (mais pas nécessairement) suffisamment grande pour recevoir un traitement expérimental et réaliser des observations. Par conséquent une parcelle expérimentale est suffisamment grande pour cultiver une à plusieurs plantes.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Placette</rdfs:label>
+        <rdfs:label xml:lang="en">Plot</rdfs:label>
+        <skos:altLabel xml:lang="fr">Micro Parcelle</skos:altLabel>
+        <skos:note>European and Mediterranean Plant Protection Organization / Organisation Européenne et Méditerranéenne pour la Protection des Plantes. &quot;PP1/152(4)- Design and analysis of efﬁcacy evaluation trials&quot; in Bulletin OEPP/EPPO, 2012, 42 (3), pp 367-381, ISSN 0250-8052. DOI: 10.1111/epp.2610, https://pp1.eppo.int/standards/PP1-152-4</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#GroupOfGrapeVines -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#GroupOfGrapeVines">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <source xml:lang="fr">Définition donnée pour la déclaration du dispositif VitAdapt -&gt; A valider par Agnès Destrac</source>
+        <rdfs:comment xml:lang="fr">Regroupement de plantes selon des critères permettant une étude commune des ceps.</rdfs:comment>
+        <rdfs:label xml:lang="en">Group of grapevines</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupe de ceps</rdfs:label>
+        <rdfs:label xml:lang="en">Grouping of plants according to criteria allowing for a common study of grapevines.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#GroupsOfExperimentalPlot -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#GroupsOfExperimentalPlot">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <source xml:lang="fr">A valider par un groupe d&apos;expert. Définition réalisée en partant des données expérimentales.</source>
+        <source xml:lang="en">To be validated by a group of experts. Definition developed based on experimental data.</source>
+        <rdfs:comment xml:lang="en">Grouping of plots according to the criteria of a site-scale experimental study. (Experimental modalities, environmental structure - ex: road crossing)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Regroupement de placettes qui suit des critères d&apos;une étude exéprimentale à l&apos;échelle d&apos;un site. (Modalité expérimental, structure de l&apos;environnement  - passage d&apos;une route)</rdfs:comment>
+        <rdfs:label xml:lang="fr">Groupe de placettes</rdfs:label>
+        <rdfs:label>Group of plots</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Inflorescence -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Inflorescence">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/30080</source>
         <rdfs:comment xml:lang="en">A reproductive shoot system (PO:0025082) that has as parts all of the shoot axes (PO:0025029) and flowers (PO:0009046; must have two or more) distal to the most distal leaf (PO:0009025).</rdfs:comment>
         <rdfs:comment xml:lang="fr">Système de pousse reproducteur (PO : 0025082) comprenant toutes les pousses axiales (PO : 0025029) et les fleurs (PO : 0009046 ; doit en comporter au moins deux) situées à l&apos;extrémité de la feuille la plus distale (PO : 0009025).</rdfs:comment>
@@ -2097,28 +2120,22 @@ Synonyme :  Micro parcelle</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Must -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Leaf -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Must">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <source xml:lang="fr">URI: http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must
-
-Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
-        <source xml:lang="en">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
-
-Definition : International Organisation of Vine and Wine (2021). International code of oenological practices [PDF file]. pp. 454. https://www.oiv.int/sites/default/files/publication/2025-04/CPO%202025%20EN.pdf</source>
-        <rdfs:comment xml:lang="en">Liquid product obtained from fresh grapes, whether spontaneously or by physical processes such as: crushing, removing stems from grape berries or crushed grapes,
-draining, pressing.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Produit liquide obtenu à partir du raisin frais, soit spontanément, soit par les procédés physiques tels que : foulage, égrappage, éraflage ou dérâpage, égouttage, pressurage.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Moût</rdfs:label>
-        <rdfs:label xml:lang="en">Must</rdfs:label>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Leaf">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
+        <source>http://opendata.inrae.fr/gao/20010</source>
+        <rdfs:comment xml:lang="en">A phyllome (PO:0006001) that is not associated with a reproductive structure</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Phyllome (PO:0006001) n&apos;étant pas associé à une structure reproductive</rdfs:comment>
+        <rdfs:label xml:lang="fr">Feuille</rdfs:label>
+        <rdfs:label xml:lang="en">Leaf</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <source>https://amigo.geneontology.org/amigo/term/PO:0009008</source>
         <rdfs:comment xml:lang="en">A multi-tissue plant structure (PO:0025496) that is a functional unit, is a proper part of a whole plant (PO:0000003), and includes portions of plant tissue (PO:0009007) of at least two different types that derive from a common developmental path.</rdfs:comment>
@@ -2129,10 +2146,22 @@ draining, pressing.</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#PrimaryShoot -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#PrimaryShoot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Shoot"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:comment xml:lang="en">Component corresponding to a subdivision of “Unit Parcel”</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Composant correspondant à une subdivison de &quot;Parcelle Unitaire&quot;</rdfs:comment>
+        <rdfs:label xml:lang="fr">Composant Parcellaire</rdfs:label>
+        <rdfs:label xml:lang="en">Plot Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#PrimaryShoot -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#PrimaryShoot">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#Shoot"/>
         <source>http://opendata.inrae.fr/gao/20031</source>
         <rdfs:comment xml:lang="fr">Rameau issue d&apos;un bourgeon hivernal primaire</rdfs:comment>
         <rdfs:comment xml:lang="en">shoot arising from a primary winter bud</rdfs:comment>
@@ -2142,20 +2171,20 @@ draining, pressing.</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Quadrat -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Quadrat -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Quadrat">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Quadrat">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent"/>
         <rdfs:label xml:lang="en">Quadrat</rdfs:label>
         <rdfs:label xml:lang="fr">Quadrat</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#SecondaryShoot -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#SecondaryShoot -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#SecondaryShoot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Shoot"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#SecondaryShoot">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#Shoot"/>
         <source>http://opendata.inrae.fr/gao/20032</source>
         <rdfs:comment xml:lang="fr">Rameau issue d&apos;un bourgeon hivernal secondaire</rdfs:comment>
         <rdfs:comment xml:lang="en">Shoot arising from a secondary winter bud</rdfs:comment>
@@ -2165,10 +2194,10 @@ draining, pressing.</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Shoot -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Shoot -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Shoot">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Shoot">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/20030</source>
         <rdfs:comment xml:lang="en">A collective plant organ structure (PO:0025007) that produces shoot-borne portions of meristem tissue (PO:0009013) and the plant structures (PO:0009011) that arise from them</rdfs:comment>
         <rdfs:comment xml:lang="fr">Structure collective d&apos;organe végétatif (PO:0025007) qui produit des morceaux de pousses issus de tissus méristématiques (PO:0009013) et les structures végétales (PO:0009011) qui en découlent.</rdfs:comment>
@@ -2178,20 +2207,20 @@ draining, pressing.</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Transect -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Transect -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Transect">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlotComponent"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Transect">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlotComponent"/>
         <rdfs:label xml:lang="en">Transect</rdfs:label>
         <rdfs:label xml:lang="fr">Transect</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Trunk -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Trunk -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Trunk">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Trunk">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>http://opendata.inrae.fr/gao/40060</source>
         <rdfs:comment xml:lang="fr">Structure ligneuse d&apos;un cep de vigne (cordon : tronc horizontal)</rdfs:comment>
         <rdfs:comment xml:lang="en">Wood structure of a grapevine plant (cordon : horizontal trunk)</rdfs:comment>
@@ -2201,15 +2230,15 @@ draining, pressing.</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Vinestock -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Vinestock">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Plant"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasGermplasm"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#Vinestock"/>
+                <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#Vinestock"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="fr">Plante entière de vigne comprenant l&apos;ensemble des organes.
@@ -2224,10 +2253,10 @@ Synonym : Vine</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Weed -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#Weed -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Weed">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#Canopy"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#Weed">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#CoverCrop"/>
         <source>Definition: Biswanath Saha, Chaichi Devi, Meena Khwairakpam, and Ajay S.Kalamdhad. Vermicomposting and anaerobic digestion – viable alternative options for terrestrial weed management – a review. Biotechnology Reports, 17 :70–76, 2018. https://doi.org/10.1016/j.btre.2017.11.005.</source>
         <rdfs:comment xml:lang="fr">Plantes indésirables qui poussent à des endroits et à des périodes inopportunes, entrant en concurrence avec les cultures et pouvant causer des pertes économiques.</rdfs:comment>
         <rdfs:comment xml:lang="en">Uninvited plants which are grown in undesirable place and period causing competition for cultivated crops and can do economic loss.</rdfs:comment>
@@ -2237,33 +2266,15 @@ Synonym : Vine</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#Wine -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#petiole -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#Wine">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <source xml:lang="en">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
-
-Definition : International Organisation of Vine and Wine (2021). International code of oenological practices [PDF file]. pp. 454. https://www.oiv.int/sites/default/files/publication/2025-04/CPO%202025%20EN.pdf</source>
-        <source xml:lang="fr">http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#FinishedWine
-
-Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
-        <rdfs:comment xml:lang="fr">Le vin est exclusivement la boisson résultant de la fermentation alcoolique complète ou partielle du raisin frais, foulé ou non, ou du moût de raisin. Son titre alcoométrique acquis ne peut être inférieur à 8,5% volume (il peut toutefois etre exceptionnellement raméne  7% volume dans certains cas).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Wine is the beverage resulting exclusively from the partial or complete alcoholic fermentation of fresh grapes, whether crushed or not, or of grape must. Its actual alcohol content shall not be less than 8.5% vol (However, it may exceptionally be reduced to 7% by volume.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Vin</rdfs:label>
-        <rdfs:label xml:lang="en">Wine</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso-sixtine#petiole -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-sixtine#petiole">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-sixtine#PlantOrgan"/>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#petiole">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#PlantOrgan"/>
         <source>https://browser.planteome.org/amigo/term/PO:0020038</source>
         <rdfs:comment xml:lang="en">A stalk (PO:0025066) of a vascular leaf (PO:0009025).</rdfs:comment>
         <rdfs:comment xml:lang="fr">Tige (PO : 0025066) d&apos;une feuille vasculaire (PO : 0009025).</rdfs:comment>
-        <rdfs:label xml:lang="en">petiole</rdfs:label>
-        <rdfs:label xml:lang="fr">petiole</rdfs:label>
+        <rdfs:label xml:lang="en">Petiole</rdfs:label>
+        <rdfs:label xml:lang="fr">Pétiole</rdfs:label>
     </owl:Class>
     
 
@@ -2538,5 +2549,5 @@ Definition : Organisation Internationale de la Vigne et du Vin (2021). Code inte
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 

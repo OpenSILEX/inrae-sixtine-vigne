@@ -845,7 +845,7 @@
     <!-- http://opendata.inrae.fr/PO2/Ontology/TransformON/c_PbmsDB -->
 
     <owl:Class rdf:about="http://opendata.inrae.fr/PO2/Ontology/TransformON/c_PbmsDB">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <owl:equivalentClass rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <source xml:lang="fr">URI: http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must
 
 Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
@@ -2100,9 +2100,9 @@ Synonyme: Couverture végétale</rdfs:comment>
         <source xml:lang="fr">A valider par un groupe d&apos;expert. Définition réalisée en partant des données expérimentales.</source>
         <source xml:lang="en">To be validated by a group of experts. Definition developed based on experimental data.</source>
         <rdfs:comment xml:lang="en">Grouping of plots according to the criteria of a site-scale experimental study. (Experimental modalities, environmental structure - ex: road crossing)</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Regroupement de placettes qui suit des critères d&apos;une étude exéprimentale à l&apos;échelle d&apos;un site. (Modalité expérimental, structure de l&apos;environnement  - passage d&apos;une route)</rdfs:comment>
-        <rdfs:label xml:lang="fr">Groupe de placettes</rdfs:label>
+        <rdfs:comment xml:lang="fr">Regroupement de placettes qui suit des critères d&apos;une étude expérimentale à l&apos;échelle d&apos;un site. (Modalité expérimental, structure de l&apos;environnement  - passage d&apos;une route)</rdfs:comment>
         <rdfs:label>Group of plots</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupe de placettes</rdfs:label>
     </owl:Class>
     
 

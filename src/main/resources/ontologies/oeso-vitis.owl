@@ -511,6 +511,22 @@
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#hasGraft -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#hasGraft">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasGermplasm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-vitis#hasRootstock -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-vitis#hasRootstock">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasGermplasm"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -845,7 +861,7 @@
     <!-- http://opendata.inrae.fr/PO2/Ontology/TransformON/c_PbmsDB -->
 
     <owl:Class rdf:about="http://opendata.inrae.fr/PO2/Ontology/TransformON/c_PbmsDB">
-        <owl:equivalentClass rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <source xml:lang="fr">URI: http://www.mistea.supagro.inra.fr/ontologies/2016/v1/afeo#Must
 
 Definition : Organisation Internationale de la Vigne et du Vin (2021). Code international des pratiques oenologiques [Fichier PDF]. pp. 393. https://www.oiv.int/public/medias/7714/fr-oiv-code-2021.pdf</source>
@@ -2237,7 +2253,21 @@ Synonyme: Couverture végétale</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasGermplasm"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#Vinestock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#hasGraft"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#Vinestock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#hasRootstock"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.opensilex.org/vocabulary/oeso-vitis#Vinestock"/>
             </owl:Restriction>
         </rdfs:subClassOf>
